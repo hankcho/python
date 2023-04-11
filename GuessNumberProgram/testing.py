@@ -14,6 +14,9 @@ def pick():
         guess = int(input("What is your guess?: "))
         correct_number = random.randint(1, 100)
         guess_count = 1
+    except NameError:
+        print("You did not provide a number, please try again.")
+    finally:
 
         while guess != correct_number:
             if guess < correct_number:
@@ -26,12 +29,10 @@ def pick():
 
         print(f"\n CONGRATS {self.upper()}! The correct number is {correct_number}. \
             \n It took you {guess_count} guesses.")
-    except NameError:
-        print("You did not provide a number, please try again.")
 
 if __name__ == "__main__":
     name()
-    try:
-        pick()
-    except NameError:
-        print("You did not provide a number!")
+    # try:
+    pick()
+    # except NameError:
+    print("You did not provide a number!")
