@@ -6,7 +6,7 @@ self = input('Welcome to the gussing game!  \n What is your name?: ')
 def name():
     print(f"Hi {self}. I'm going to pick a number between 1 and 100.")
     time.sleep(2)
-    print("Picking a number...")
+    print("Hold on a second while I pick a number...")
     time.sleep(5)
 
 def pick():
@@ -25,7 +25,6 @@ def pick():
 
     print(f"\n CONGRATS {self.upper()}! The correct number is {correct_number}. \
           \n It took you {guess_count} guesses.")
-    # print("CONGRATS " + self.upper()) 
 
 if __name__ == "__main__":
     name()
