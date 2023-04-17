@@ -3,6 +3,11 @@ import random
 
 name = input('Welcome to the gussing game!  \n What is your name?: ')
 
+def entername():
+    if len(name) <= 0:
+        print("You did not enter your name.  Please try again.")
+    exit()
+
 def yourname():
     print(f"Hi {name}. I'm going to pick a number between 1 and 100.")
     time.sleep(2)
@@ -30,5 +35,6 @@ def pick():
         print("You did not make a guess.  Please restart the game.")
 
 if __name__ == "__main__":
+    entername()
     yourname()
     pick()
