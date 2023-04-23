@@ -8,18 +8,15 @@ class Student:
 
 students = [Student("Joe", 0.46), Student("Amy", 0.72), Student("Mark", 0.88), Student("Zach", 0.75), Student("Jane", 0.84), Student("Sarah", 0.63)]
 
+# failing_students = []
+# for x in students:
+#     if x.score < 0.7:
+#         failing_students.append(x)
 
+filter_list = list(filter(lambda student: student.score < 0.7, students))
 
-
-
-
-
-
-
-
-
-
-
+# print(failing_students)
+print(filter_list)
 
 
 
@@ -28,4 +25,6 @@ students = [Student("Joe", 0.46), Student("Amy", 0.72), Student("Mark", 0.88), S
 # Challenge
 # Use filter to list all even numbers
 
-numbers = [1,2,3,4,5]
+numbers = [1,2,3,4,5,6,7]
+
+print(list(filter(lambda number: number %2 == 0, numbers)))
